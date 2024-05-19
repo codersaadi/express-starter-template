@@ -8,7 +8,7 @@
     "format": "prettier --write  \"src/**/*.ts\" \"test/**/*.ts\"",
     "lint": "eslint --ext .ts src/ test/",
     "dev": "nodemon --watch src --exec ts-node src/main.ts",
-    "start": "node dist/main.js",
+    "start": "ts-node  dist/main.js",
     "build": "tsc"
   },
   "keywords": ["express", "nodejs", "typescript", "starter", "template", "web", "development", "mvc"],
