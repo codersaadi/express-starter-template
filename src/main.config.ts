@@ -31,7 +31,8 @@ const defaultConfig: AppConfig = {
   port: process.env.PORT ? parseInt(process.env.PORT) : 3000,
   dbUrl: process.env.DB_URL || '',
   NODE_ENV: process.env.NODE_ENV || 'development',
-  SERVER_ERROR_MESSAGE: process.env.SERVER_ERROR_MESSAGE || 'Something went wrong!',
+  SERVER_ERROR_MESSAGE:
+    process.env.SERVER_ERROR_MESSAGE || 'Something went wrong!',
   GRACEFUL_SHUTDOWN: {
     timeout: 10000, // 10 seconds default
     enabled: true,
@@ -68,7 +69,9 @@ const gracefulShutdown = (server: Server) => {
 
   // If the server takes too long to shut down, force exit
   setTimeout(() => {
-    console.error('Could not close connections in time. Forcefully shutting down...');
+    console.error(
+      'Could not close connections in time. Forcefully shutting down...',
+    );
     process.exit(1);
   }, defaultConfig.GRACEFUL_SHUTDOWN?.timeout);
 };
