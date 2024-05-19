@@ -1,39 +1,29 @@
 
-# Project Title
-
-express-samplets-starter
-
-
+# Express-sample-ts-starter
 ## Authors
 
 - [@saadi925](https://www.github.com/saadi925)
 
-
-# Project Title
-
-express-samplets-starter
 
 
 ## Installation
 
 Clone the repository:
 
-git clone https://github.com/saadi925/express-samplets-starter.git
-
+```git clone https://github.com/saadi925/express-samplets-starter.git```
 cd express-samplets-starter
 
 Install dependencies:
 
-npm install
+```npm install```
 
 or
 
-yarn install
+```yarn install```
 
 or 
 
-pnpm install
-
+```pnpm install```
 
 
 
@@ -48,18 +38,20 @@ Start the development server with hot reloading  : npm run dev
 
 Compile TypeScript to JavaScript
 :
-npm run build
+```npm run build```
 
 
 Start the production server
-:npm start
+:
+
+```npm start```
 
 Run ESLint to check for linting errors:
-npm run lint
+```npm run lint```
 
 
 Format the code using Prettier:
-npm run format
+```npm run format```
 ## Using CustomRouter and Registering Endpoints
 The CustomRouter interface extends the default Express Router to include additional properties such as rootPath and endpoints. Endpoints can be defined and registered in a more structured way.
 
@@ -93,6 +85,9 @@ appConfig.registerEndpoints(router);
 
 export default router;
 
+
+in  src/main.ts
+app.use(sampleRoute.rootPath, sampleRoute);
 ```
 # Traditional Route Definition
 You can still define routes in the traditional way if you prefer:
@@ -146,3 +141,12 @@ For support, email userid925925@gmail.com
 - Typescript
 - Configuration File
 - Logging
+
+
+## Contributing
+
+Contributions are always welcome!
+
+
+Please adhere to this project's `code of conduct`.
+
