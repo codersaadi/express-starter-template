@@ -5,7 +5,7 @@ import appConfig from '@/main.config';
 
 const router: CustomRouter = Router();
 
-router.mainPath = '/';
+router.rootPath = '/';
 router.endpoints = [
   {
     path: '/',

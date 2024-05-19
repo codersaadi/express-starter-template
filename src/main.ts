@@ -8,7 +8,6 @@ import helmet from 'helmet';
 import sampleRoute from '@/routes/sampleRoute';
 import { logger } from '@/utils/logger';
 import appConfig from '@/main.config';
-
 dotenv.config();
 
 const app: Application = express();
@@ -22,7 +21,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 // Routes
-app.use(sampleRoute.mainPath, sampleRoute);
+app.use(sampleRoute.rootPath, sampleRoute);
 
 // Error handling middleware
 app.use((err: Error, req: Request, res: Response, next: NextFunction) => {

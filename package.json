@@ -1,7 +1,7 @@
 {
-  "name": "express_nodejs_typescript",
+  "name": "express-sample-ts-starter",
   "version": "1.0.0",
-  "description": "",
+  "description": "A comprehensive starter template for building modern web applications using Express.js, Node.js, and TypeScript.",
   "main": "src/main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -11,9 +11,13 @@
     "start": "node dist/main.js",
     "build": "tsc"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": ["express", "nodejs", "typescript", "starter", "template", "web", "development", "mvc"],
+  "author": "Saad Bukhari",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/saadi925/express-nodejs-typescript-starter.git"
+  },
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^16.4.5",
