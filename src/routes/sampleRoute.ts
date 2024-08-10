@@ -1,23 +1,7 @@
 import { Router } from 'express';
 import { sampleController } from '@/controllers/testController';
-import { CustomRouter } from '@/types/routes';
-import appConfig from '@/main.config';
 
-const router: CustomRouter = Router();
-
-router.rootPath = '/';
-router.endpoints = [
-  {
-    path: '/',
-    method: 'get',
-    controller: sampleController,
-  },
-  {
-    path: '/',
-    method: 'post',
-    controller: sampleController,
-  },
-];
-appConfig.registerEndpoints(router);
+const router = Router();
+router.get('/', sampleController);
 
 export default router;

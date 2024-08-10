@@ -11,7 +11,16 @@
     "start": "ts-node  dist/main.js",
     "build": "tsc"
   },
-  "keywords": ["express", "nodejs", "typescript", "starter", "template", "web", "development", "mvc"],
+  "keywords": [
+    "express",
+    "nodejs",
+    "typescript",
+    "starter",
+    "template",
+    "web",
+    "development",
+    "mvc"
+  ],
   "author": "Saad Bukhari",
   "license": "MIT",
   "repository": {

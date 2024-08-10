@@ -7,7 +7,6 @@ import { Application, Request, Response, NextFunction } from 'express';
 import helmet from 'helmet';
 import sampleRoute from '@/routes/sampleRoute';
 import { logger } from '@/utils/logger';
-import appConfig from '@/main.config';
 dotenv.config();
 
 const app: Application = express();
@@ -21,20 +20,15 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 // Routes
-app.use(sampleRoute.rootPath, sampleRoute);
+app.use("/", sampleRoute);
 
-// Error handling middleware
-app.use((err: Error, req: Request, res: Response, next: NextFunction) => {
-  if (appConfig.logging.enabled) {
-    logger.error(err.message);
-  }
-  res.status(500).send(appConfig.SERVER_ERROR_MESSAGE);
-});
+// logger 
+// // Error handling middleware
+// app.use((err: Error, req: Request, res: Response, next: NextFunction) => {
+//     logger.error(err.message);
+//   res.status(500).send('Something went wrong!');
+// });
 
-app.listen(appConfig.port);
-
-if (appConfig.GRACEFUL_SHUTDOWN.enabled) {
-  process.on('SIGINT', () => appConfig.gracefulShutdown(server));
-  process.on('SIGTERM', () => appConfig.gracefulShutdown(server));
-}
-appConfig.logAppInfo();
+app.listen(process.env.PORT || 3000, () => {
+  logger.info(`Server is running on port ${process.env.PORT || 3000}`);
+})
