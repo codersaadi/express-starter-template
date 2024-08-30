@@ -2,7 +2,7 @@
 # Express-sample-ts-starter
 ## Authors
 
-- [@saadi925](https://www.github.com/saadi925)
+- [@saadi925](https://www.github.com/codersaadi)
 
 
 
@@ -10,8 +10,8 @@
 
 Clone the repository:
 
-```git clone https://github.com/saadi925/express-samplets-starter.git```
-cd express-samplets-starter
+```git clone https://github.com/codersaadi/express-stater-template.git```
+cd express-starter-template
 
 Install dependencies:
 
@@ -52,58 +52,7 @@ Run ESLint to check for linting errors:
 
 Format the code using Prettier:
 ```npm run format```
-## Using CustomRouter and Registering Endpoints
-The CustomRouter interface extends the default Express Router to include additional properties such as rootPath and endpoints. Endpoints can be defined and registered in a more structured way.
 
-
-
-## Custom Router 
-``` javascript.
-import { Router } from 'express';
-import { sampleController } from '@/controllers/testController';
-import { CustomRouter } from '@/types/routes';
-import appConfig from '@/main.config';
-
-const router: CustomRouter = Router();
-
-router.rootPath = '/api';
-router.endpoints = [
-  {
-    path: '/',
-    method: 'get',
-    controller: sampleController,
-  },
-  {
-    path: '/',
-    method: 'post',
-    controller: sampleController,
-  },
-];
-
-// Register endpoints
-appConfig.registerEndpoints(router);
-
-export default router;
-
-
-in  src/main.ts
-app.use(sampleRoute.rootPath, sampleRoute);
-```
-# Traditional Route Definition
-You can still define routes in the traditional way if you prefer:
-```
-javascript.
-import { Router } from 'express';
-import { sampleController } from '@/controllers/testController';
-
-const router = Router();
-
-router.get('/api', sampleController);
-router.post('/api', sampleController);
-
-export default router;
-
-```
 ## Project Structure 
 ```.
 ├── dist
@@ -115,7 +64,6 @@ export default router;
 ├── src
 │   ├── controllers
 │   │   └── testController.ts
-│   ├── main.config.ts
 │   ├── main.ts
 │   ├── middlewares
 │   ├── routes
