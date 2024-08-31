@@ -11,7 +11,7 @@
 Clone the repository:
 
 ```git clone https://github.com/codersaadi/express-stater-template.git```
-cd express-starter-template
+```cd express-starter-template```
 
 Install dependencies:
 
